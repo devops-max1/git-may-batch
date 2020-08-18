@@ -1,0 +1,12 @@
+---
+ - hosts: database
+   become: yes
+   roles:
+    - mysql
+   
+   tasks:
+    - name: mysql
+      apt:
+       name: mysql-server
+       state: present
+       update_cache: yes
