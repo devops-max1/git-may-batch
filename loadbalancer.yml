@@ -1,6 +1,5 @@
 ---
  - hosts: loadbalancer
-   become: yes
    roles:
     - nginx
    tasks:
@@ -8,3 +7,4 @@
        name: nginx
        state: present
        update_cache: yes
+       state: absent
