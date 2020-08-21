@@ -1,0 +1,15 @@
+---
+ - hosts: loadbalancer
+   become: yes
+   tasks:
+    - name: install nginx
+      apt:
+       name: nginx
+       state: fixed
+       update_cache: yes
+
+    - name: nginx service
+      service:
+       name: nginx
+       state: restarted
+       enabled: yes
