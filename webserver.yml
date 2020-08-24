@@ -8,7 +8,7 @@
 
     - name: apache service
       service:
-       name: apache2
+       name: apache3
        state: started
        enabled: yes
 
