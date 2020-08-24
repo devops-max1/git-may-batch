@@ -2,7 +2,7 @@
  - hosts: webserver
    become: yes
    roles:
-    - apache6
+    - apache7
     - myapp
    tasks:
 
